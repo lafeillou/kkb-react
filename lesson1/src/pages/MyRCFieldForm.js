@@ -1,4 +1,4 @@
-import React, {Component, useEffect} from "react";
+import React, {useEffect} from "react";
 // import Form, {Field} from "rc-field-form";
 import Form, {Field} from "../components/my-rc-field-form/";
 import Input from "../components/Input";
@@ -20,7 +20,7 @@ export default function MyRCFieldForm(props) {
 
   // 函数组件初次渲染之后执行，类似componentDidMount
   useEffect(() => {
-    console.log("form", form); //sy-log
+    // console.log("form", form); //sy-log
     // form.setFieldsValue({username: "default"});
   }, []);
 
