@@ -50,3 +50,4 @@ ReactDOM.render(<App />, document.getElementById("root"));
 //   }
 //   return funcs.reduce((a, b) => (...args) => a(b(...args)));
 // }
+// console.log(compose(f1, f2, f3)("omg"));
