@@ -18,12 +18,13 @@ import {
   Route,
   Link,
   Switch,
-  useHistory,
-  useLocation,
-  useRouteMatch,
-  useParams,
-  withRouter
-  // Redirect
+  // useHistory,
+  // useLocation,
+  // useRouteMatch,
+  // useParams,
+  withRouter,
+  // Redirect,
+  Prompt
 } from "./k-react-router-dom/";
 
 import HomePage from "./pages/HomePage";
@@ -33,7 +34,7 @@ import _404Page from "./pages/_404Page";
 
 function App() {
   const [count, setCount] = useState(1);
-  const id = 123;
+  // const id = 123;
   return (
     <div className="App">
       <button
@@ -83,7 +84,7 @@ export default App;
 class Product extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {confirm: false};
+    this.state = {confirm: true};
   }
   render() {
     const {match} = this.props;
@@ -95,13 +96,13 @@ class Product extends React.Component {
         Product:{id}
         <Link to={url + "/detail"}>详情</Link>
         <Route path={url + "/detail"} component={Detail} />
-        {/* <Prompt
+        <Prompt
           when={this.state.confirm}
           // message="Are you sure you want to leave?"
           message={location => {
             return "Are you sure you want to leave-fun";
           }}
-        /> */}
+        />
       </div>
     );
   }
@@ -132,13 +133,13 @@ function Detail(props) {
   return <div>Detail</div>;
 }
 
-function children(props) {
-  console.log("children props", props); //sy-log
+// function children(props) {
+//   console.log("children props", props); //sy-log
 
-  return <div>children</div>;
-}
+//   return <div>children</div>;
+// }
 
-function render(props) {
-  console.log("render props", props); //sy-log
-  return <div>render</div>;
-}
+// function render(props) {
+//   console.log("render props", props); //sy-log
+//   return <div>render</div>;
+// }

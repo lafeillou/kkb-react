@@ -1,4 +1,4 @@
-import {RouterContext} from "./RouterContext";
+import { RouterContext } from "./RouterContext";
 
 const withRouter = WrappedComponent => props => {
   return (
