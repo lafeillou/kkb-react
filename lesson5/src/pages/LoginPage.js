@@ -45,3 +45,9 @@ class LoginPage extends Component {
   }
 }
 export default LoginPage;
+
+// // {
+//   products : {},
+//   products2 : {}
+
+// }
