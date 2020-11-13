@@ -5,7 +5,7 @@ import { getProductData } from "../services/product";
 // }
 export default {
   namespace: "example",
-
+  // table用到的数据
   state: {
     data: [],
     pageSize: 10,

@@ -2,7 +2,7 @@ import React from "react";
 import { Router, Route, Switch } from "dva/router";
 import IndexPage from "./routes/IndexPage";
 import ExamplePage from "./routes/ExamplePage";
-import UserPage from "./routes/UserPage";
+// import UserPage from "./routes/UserPage";
 import { UserPageDynamic } from "./dynamic/";
 
 function RouterConfig({ history }) {
