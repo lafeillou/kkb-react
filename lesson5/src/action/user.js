@@ -1,5 +1,6 @@
-import {LOGIN_SUCCESS, LOGIN_FAILURE, REQUEST, LOGIN_SAGA} from "./const";
-import LoginService from "../service/login";
+// import {LOGIN_SUCCESS, LOGIN_FAILURE, REQUEST, LOGIN_SAGA} from "./const";
+import {LOGIN_SAGA} from "./const";
+// import LoginService from "../service/login";
 
 // export const login = userInfo => ({type: LOGIN_SUCCESS, payload: userInfo});
 

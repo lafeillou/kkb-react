@@ -12,12 +12,13 @@ import {call, fork, put, take} from "redux-saga/effects";
 
 // worker saga
 function* loginHandle(action) {
+  // 同后台交互，提示加载中...
   yield put({type: REQUEST});
 
   try {
     // 两个顺序异步请求
-    const res1 = yield call(LoginService.login, action.payload);
-    const res2 = yield call(LoginService.getMoreUserInfo, res1);
+    const res1 = yield call(LoginService.login, action.payload); // 获取用户基本信息，用户id
+    const res2 = yield call(LoginService.getMoreUserInfo, res1); // 获取用户详细信息
     // 状态更新
     yield put({type: LOGIN_SUCCESS, payload: res2});
   } catch (err) {

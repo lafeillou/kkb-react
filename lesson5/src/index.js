@@ -12,7 +12,7 @@ ReactDOM.render(
 );
 
 //yield只能用在generator函数里
-//
+
 // function* helloWorldGenerator() {
 //   yield "hello";
 //   yield "world";
@@ -32,7 +32,6 @@ ReactDOM.render(
 //   let aa = yield (a = 1 + 1);
 //   return aa;
 // }
-
 // console.log("fun0", a);
 // let b = fun();
 // console.log("fun0-2", a);

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Redirect} from "react-router-dom";
 import {connect} from "react-redux";
-import {LOGIN_SUCCESS} from "../action/const";
+// import {LOGIN_SUCCESS} from "../action/const";
 import {login} from "../action/user";
 
 @connect(
@@ -24,7 +24,8 @@ class LoginPage extends Component {
     this.setState({name: e.target.value});
   };
   render() {
-    const {isLogin, location, dispatch, login, err, loading} = this.props;
+    // const {isLogin, location, dispatch, login, err, loading} = this.props;
+    const {isLogin, location, login, err, loading} = this.props;
     const {from = "/"} = location.state || {};
     if (isLogin) {
       return <Redirect to={from} />;
