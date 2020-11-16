@@ -1,3 +1,4 @@
+// 第六次作业key03，暗号： 双十一打骨折
 const productTableData = [];
 for (let i = 0; i < 10; i++) {
   productTableData.push({
