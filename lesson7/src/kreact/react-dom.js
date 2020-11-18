@@ -25,9 +25,13 @@ function createNode(vnode) {
       ? updateClassComponent(vnode)
       : updateFunctionComponent(vnode);
   } else {
+<<<<<<< HEAD
     node = document.createDocumentFragment()
     reconcileChildren(props.children, node);
     updateNode(node, props);
+=======
+    node = createFragmentComponent(vnode);
+>>>>>>> 26569ee01dc223a6e27acac3e9e1df205fd0e75e
   }
 
   return node;
@@ -46,6 +50,13 @@ function updateHostComponent(vnode) {
   }
 
   updateNode(node, props);
+  return node;
+}
+
+// 处理Fragment节点
+function createFragmentComponent(vnode) {
+  const node = document.createDocumentFragment();
+  reconcileChildren(vnode.props.children, node);
   return node;
 }
 
