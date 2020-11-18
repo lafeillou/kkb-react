@@ -28,7 +28,7 @@ const jsx = (
     <p>全栈</p>
     <a href="https://www.kaikeba.com/">开课吧</a>
     <FunctionComponent name="函数组件" />
-    {/* <ClassComponent name="类组件" /> */}
+    <ClassComponent name="类组件" />
   </div>
 );
 
