@@ -15,7 +15,7 @@ function createNode(vnode) {
   let node = null;
   // todo vnode->node
 
-  const {type} = vnode;
+  const {type, props} = vnode;
   if (typeof type === "string") {
     // 原生标签
     node = updateHostComponent(vnode);
@@ -24,6 +24,10 @@ function createNode(vnode) {
     node = type.prototype.isReactComponent
       ? updateClassComponent(vnode)
       : updateFunctionComponent(vnode);
+  } else {
+    node = document.createDocumentFragment()
+    reconcileChildren(props.children, node);
+    updateNode(node, props);
   }
 
   return node;
