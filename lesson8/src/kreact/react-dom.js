@@ -48,6 +48,7 @@ function updateFunctionComponent(workInProgress) {
   reconcileChildren(workInProgress, children);
 }
 
+// 第8次作业,暗号: 蓝莓
 // 类组件
 // 先实例化 再执行render函数
 function updateClassComponent(workInProgress) {
